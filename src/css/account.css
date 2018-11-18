@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* CSS Document */
+.empty01{
+	height: 65px;
+}
+.account{
+	width: 890px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.17);
+	color: #f7b700;
+	
+}
+.account hr{
+	width: 750px; 
+	height:1px;
+	border:none;
+	border-top:1px solid #f7b700;
+}
+.account_title{
+	text-align: center;
+	
+}
+
+.account_name{
+	width: 750px;
+	text-align: center;
+	padding-left: 70px;
+}
+.account_balance{
+	width: 750px;
+	
+	padding-left: 70px;
+}
+.account_balance_title{
+	float: left;
+}
+.account_balance_num{
+	float: right;
+}
+.bet_num{
+	width: 750px;
+	padding-left: 70px;
+}
+.bet_num_title{
+	float: left;
+}
+.bet_num_num{
+	float: right;
+}
+.win_num{
+	width: 750px;
+	padding-left: 70px;
+}
+.win_num_title{
+	float: left;
+}
+.win_num_num{
+	float: right;
+}
+.bet_price{
+	width: 750px;
+	padding-left: 70px;
+}
+.bet_price_title{
+	float: left;
+}
+.bet_price_num{
+	float: right;
+}
+.bonus_price{
+	width: 750px;
+	padding-left: 70px;
+}
+.bonus_price_title{
+	float: left;
+}
+.bonus_price_num{
+	float: right;
+}
+
+.account_details_title{
+	text-align: center;
+	
+}
+.account_details_type{
+	width: 750px;
+	padding-left: 70px;
+}
+

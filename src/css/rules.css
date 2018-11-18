@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.empty01{
+	height: 65px;
+}
+
+
+.rules{
+	width: 890px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.17);
+	color: #f7b700;
+	
+}
+.rules hr{
+	width: 750px; 
+	height:1px;
+	border:none;
+	border-top:1px solid #f7b700;
+}
+.rules_title{
+	text-align: center;
+	
+}
+
+.rules_content{
+	width: 750px;
+	padding-left: 70px;
+}

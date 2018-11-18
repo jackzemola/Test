@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* CSS Document */
+.empty01{
+	height: 65px;
+}
+
+.how{
+	width: 890px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.17);
+	color: #f7b700;
+}
+.how hr{
+	width: 750px; 
+	height:1px;
+	border:none;
+	border-top:1px solid #f7b700;
+}
+.how_title{
+	text-align: center;
+	font-size: 30pt;
+}
+
+.how_content{
+	width: 750px;
+	padding-left: 70px;
+	font-size: 16pt;
+}

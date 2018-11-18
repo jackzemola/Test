@@ -1,0 +1,22 @@
+table, td, th
+{
+	border:1px solid black;
+	border-collapse: collapse;
+	color: #fac500;
+}
+table
+{
+	width: 890px;
+}
+td
+{
+	color: #fac500;
+	height:30px;
+	font-size: 20pt;
+}
+th
+{
+	font-size: 25pt;
+	height:50px;
+	background-color: rgba(255,255,255,0.13);
+}

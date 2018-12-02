@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -60,10 +61,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlwebpackPlugin({
+      template: './index.html',
+      filename: './index.html'
+    })
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './',
     hot: true,
     historyApiFallback: true
   }

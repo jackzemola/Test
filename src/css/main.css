@@ -2,112 +2,113 @@
 /* CSS Document */
 .header_mod{
 	background-color: #1a1b1d;
-	height: 150px;
+	height: 102px;
+	width:750px;
+	overflow: hidden;
 }
 
 .header_logo{
 	float:left;
-	width:100px;
-	height: 100px;
+	width:70px;
+	height: 70px;
+	margin: 16px 0 0 30px;
 	background: url("../img/logo.png");
+	background-size: 100%;
 }
 
 .header_menu_btn{
 	float:right;
-	width: 100px;
-	height:100px;
+	width: 70px;
+	height:70px;
+	margin: 16px 30px 0 0;
 	background: url("../img/header_menu_btn.png");
+	background-size: 100%;
 }
 
 .empty01{
-	height: 65px;
+	height: 60px;
 }
 
 .main_mod{
-	width: 1012px;
-	height: 1350px;
-	
+	width: 750px;
 }
 
 
 .main_bg1{
-	
-	height: 152px;
+	box-sizing: border-box;
+	height: 113px;
+	padding-top: 30px;
 	background: url("../img/main_bg01.png") no-repeat center;
 	color: #777777;
-/*	font-size: 14pt;
-*/	
+	background-size: 100%;
+	font-size: 3rem;
+	line-height: 78px;
 }
 .num_players_title{
 	float: left;
-	padding-top: 6%;
 	padding-left: 11%;
-	font-size: 40pt;
 }
 .num_price_title{
-	padding-top: 6%;
 	padding-left: 40%;
-	font-size: 40pt;
 }
 .main_bg2{
-	
-	height: 224px;
+	height: 166px;
 	background: url("../img/main_bg02.png") no-repeat center;
+	background-size: 100%;
+	font-size: 4.8rem;
+	line-height:154px;
 }
 .num_players{
 	float: left;
-	padding-top: 5%;
-	padding-left: 15%;
+	padding-left: 126px;
 	color: #777777;
-	font-size: 70pt;
 }
 .num_price{
 	float: left;
-	padding-top: 5%;
-	padding-left: 16%;
+	padding-left: 150px;
 	color: #fac500;
-	font-size: 70pt;
 }
 .num_price_EOS{
 	float: left;
-	padding-top: 5%;
-	padding-left: 3%;
+	padding-left: 24px;
 	color: #fac500;
-	font-size: 80pt;
 }
 .main_bg3{
-	color: #777777;
-	height: 138px;
+	box-sizing: border-box;
+	color: #777;
+	height: 102px;
+	padding-top: 20px;
 	background: url("../img/main_bg03.png") no-repeat center;
+	background-size: 100%;
+	font-size: 3rem;
 }
 .countdown_title{
 	float: left;
-	padding-top: 3%;
-	padding-left: 10%;
-	font-size: 40pt;
+	padding-left: 98px;
+	line-height: 60px;
 }
 .countdown{
 	float: left;
-	padding-top: 3%;
-	padding-left: 25%;
+	padding-left: 196px;
 	color: #fac500;
-	font-size: 40pt;
 }
 .user_picknumber{
 	float: left;
-	padding-top: 3%;
-	padding-left: 45%;
+	width: 100%;
+	text-align: center;
 	padding-top: 20px;
 	color: #fac500;
-	font-size: 50pt;
+	font-size: 1.8rem;
 }
 .main_bg4{
-	height: 112px;
+	height: 83px;
 	background: url("../img/main_bg04.png") no-repeat center;
+	background-size: 100%;
 }
 .main_bg5{
-	height: 260px;
+	height: 193px;
 	background: url("../img/main_bg05.png") no-repeat center;
+	background-size: 100%;
 }
 /*.main_tiao{
 	height: 260px;
@@ -140,12 +141,14 @@
     background: #f7b700;
 }
 .main_bet_btn{
-	height: 127px;
+	height: 86px;
 	background: url("../img/main_bet_btn.png")no-repeat center;
+	background-size: 340px auto;
 }
 .main_bg6{
-	height: 350px;
+	height: 259px;
 	background: url("../img/main_bg06.png") no-repeat center;
+	background-size: 100%;
 }
 
 .orders_mod{

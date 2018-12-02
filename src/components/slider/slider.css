@@ -1,8 +1,9 @@
 .wrapper {
     position: relative;
-    margin-left: 150px;
+    margin-left: 88px;
     background-color: #0e0e1b;
     border: 1px solid darkgray;
+    border-radius: 4px;
 }
 .slider {
     position: absolute; 
@@ -16,6 +17,7 @@
     cursor: pointer;
 }
 .fill {
-    height: 16px;
+    height: 10px;
     background: #f7b700;
+    border-radius: 4px;
 }

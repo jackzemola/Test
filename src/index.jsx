@@ -10,10 +10,10 @@ export default class GameApp extends React.Component {
   }
   render() {
     return (
-            <Router >
-                <Route path={"/"} component={Root} />                
-            </Router>
-        );
+        <Router >
+            <Route path={"/"} component={Root} />                
+        </Router>
+    );
   }
 }
 ReactDOM.render(<GameApp />,document.getElementById('app'));

@@ -158,22 +158,31 @@
 	color: #f7b700;
 	
 }
+.orders_mclassod{
+	width: 664px;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.1);
+}
 .orders_mod_menu{
 	overflow:hidden;
+	height: 56px;
+	font-size: 2.8rem;
+	color: #fac500;
+}
+.orders_mod_menu div {
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	margin-top: 10px;
 }
 .orders_mod_menu1{
-	float: left;
-	width: 264px;
-	height: 82px;
-	color: #fac500;
-	font-size: 30pt;
+	width: 183px;
+	text-indent: 22px;
+	border-right: 1px solid #fac500;
 }
 .orders_mod_menu2{
-	float: left;
-	width: 264px;
-	height: 82px;
-	color: #fac500;
-	font-size: 30pt;
+	width: 212px;
+	text-align: center;
 }
 .orders_mod_caption{
 	overflow:hidden;
@@ -203,26 +212,4 @@
 	padding-top: 5%;
 	color: #fac500;
 	float: left;
-}
-table, td, th
-{
-	border:1px solid black;
-	border-collapse: collapse;
-	color: #fac500;
-}
-table
-{
-	width: 890px;
-}
-td
-{
-	color: #fac500;
-	height:30px;
-	font-size: 20pt;
-}
-th
-{
-	font-size: 25pt;
-	height:50px;
-	background-color: rgba(255,255,255,0.13);
 }

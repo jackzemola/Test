@@ -51,7 +51,17 @@ export default class Table extends React.Component{
               <tr>
                 {
                  this.props.headers.map((head,index)=>
-                  <th key={index}>{head}</th> ) 
+                  {
+                    switch (index) {
+                      case 0:
+                        return <th style={{width: 183}} key={index}>{head}</th>
+                      case 1:
+                        return <th style={{width: 212}} key={index}>{head}</th>
+                      default:
+                        return <th key={index}>{head}</th>
+                    }
+                    
+                  } ) 
                 }
               </tr>
             </thead>

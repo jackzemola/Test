@@ -162,7 +162,6 @@ export default class Home extends React.Component {
               let iswin = result.rows[i].winner
               let winner = iswin ? 'winner' : 'lose'
               let r = time + '------' + name + '-----' + balance + '----' + winner
-              console.log(r)
               list[count] = r
               count++
               this.setState({ userList: list })
@@ -214,10 +213,9 @@ export default class Home extends React.Component {
     console.log(wlist);
 
     let list = this.state.userList;
-    list.push(['2018-10-11T20:10:10', 'player1', '0.2']);
-    list.push(['2018-10-11T20:10:20', 'player2', '0.3']);
-    list.push(['2018-10-11T20:10:30', 'player3', '0.4']);
-    console.log(list);
+    list.push(['10.11 20:10:10', 'player1', '0.2']);
+    list.push(['10.11 20:10:20', 'player2', '0.3']);
+    list.push(['10.11 20:10:30', 'player3', '0.4']);
 
     // const data=[
     //   ['Tfd rod','J.F','English','1954-1955','150milion'],

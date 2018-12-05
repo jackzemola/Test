@@ -8,18 +8,6 @@ export default class Table extends React.Component{
             visible: false
         };
     }
-    /*
-              html += '<table>'
-          html += ' <tr> <th>Time</th><th>Account</th><th>Bouns</th></tr>'
-          for (var i in this.state.userList) {
-            html+= '<tr>'
-            html+= '<td>'+this.state.userList[i].time+'</td>'
-            html+= '<td>'+this.state.userList[i].name+'</td>'
-            html+= '<td>'+this.state.userList[i].balance+'</td>'
-            html+= '</tr>' 
-          }
-          html += '</table>'
-    */
   componentDidMount() {
     this.setState({ visible: this.props.visible})
         
@@ -28,24 +16,11 @@ export default class Table extends React.Component{
         this.setState({visible: props.visible})
       //  console.log("componentWillReceiveProps",this.state.visible)
   }
-  /*
-  var btnType=Object.keys(obj).map((key,i)=>{
-    var item=obj[key].map((s,index)=>{
-      return (
-        <button className={styles.btnType} key={index}>{obj[key][index]}</button>
-      )
-    })
-    return(
-      <Card title={key} className={styles.marginB10} key={i}>
-        {item}
-      </Card> 
-    )
-  })
-  */
   render(){
     if(this.state.visible){
       return (
-       <div>
+       <div className="table-wrap">
+        <div className="thead-bg"></div>
           <table>
             <thead >
               <tr>
@@ -54,7 +29,7 @@ export default class Table extends React.Component{
                   {
                     switch (index) {
                       case 0:
-                        return <th style={{width: 183}} key={index}>{head}</th>
+                        return <th style={{width: 200}} key={index}>{head}</th>
                       case 1:
                         return <th style={{width: 212}} key={index}>{head}</th>
                       default:

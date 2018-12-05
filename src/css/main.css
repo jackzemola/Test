@@ -1,5 +1,11 @@
 ﻿@charset "UTF-8";
 /* CSS Document */
+.clearfix::after {
+	display: block;
+	content: '';
+	visibility: none;
+	clear: both;
+}
 .header_mod{
 	background-color: #1a1b1d;
 	height: 102px;
@@ -176,7 +182,7 @@
 	margin-top: 10px;
 }
 .orders_mod_menu1{
-	width: 183px;
+	width: 200px;
 	text-indent: 22px;
 	border-right: 1px solid #fac500;
 }

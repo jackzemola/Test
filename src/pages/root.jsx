@@ -6,7 +6,7 @@ import Home from "./home.jsx";
 import Account from './account.jsx';
 import Rules from './rules.jsx';
 import How from './how.jsx';
-import About from './about.jsx';
+// import About from './about.jsx';
 import Test from './test.jsx'
 
 // 
@@ -18,7 +18,6 @@ export const NotFound404 = (props) => (
 export default class Root extends React.Component {
 	constructor(props) {
 		super(props)
-    console.log(this.props.match)
 	}
 	render() {
 		const {match} = this.props;
@@ -33,7 +32,7 @@ export default class Root extends React.Component {
                     <Route path={`${match.path}account`} component={ Account } />
                     <Route path={`${match.path}rules`} component={ Rules } />
                     <Route path={`${match.path}how`} component={ How } />
-                    <Route path={`${match.path}about`} component={ About } />
+                    {/* <Route path={`${match.path}about`} component={ About } /> */}
                     <Route path={`${match.path}test`} component={ Test } />
                     <Route component={NotFound404}/>     
                 </Switch>   

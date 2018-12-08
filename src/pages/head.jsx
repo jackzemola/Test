@@ -9,10 +9,12 @@ export default class Head extends React.Component {
 		 this.state = { showDrawer:false}
 	}
 
-	openDrawerToggle = () => {
-	    this.setState((prevState) => {
-	      return {showDrawer: !prevState.showDrawer};
-	    })
+	openDrawerToggle = (e) => {
+		if (e.target && e.target.matches('.header_menu_btn')) {
+			this.setState((prevState) => {
+				return {showDrawer: !prevState.showDrawer};
+			})
+		}
   	}
 
 	render() {

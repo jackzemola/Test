@@ -8,6 +8,11 @@ import rootReducer from './store/reducers/index';
 
 const store = createStore(rootReducer)
 
+store.subscribe(() => {
+  const state = store.getState();
+  localStorage.setItem('lang', state.lang.lang)
+})
+
 export default class GameApp extends React.Component {
   constructor(props) {
     super(props)

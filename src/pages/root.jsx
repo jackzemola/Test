@@ -18,7 +18,7 @@ export const NotFound404 = (props) => (
 export default class Root extends React.Component {
 	constructor(props) {
 		super(props)
-
+    console.log(this.props.match)
 	}
 	render() {
 		const {match} = this.props;

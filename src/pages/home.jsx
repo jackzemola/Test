@@ -385,7 +385,10 @@ export default class Home extends React.Component {
           <div className="main_bg4" ></div>
           <div className="main_bg5">
             <Slider height={10} width={570} max={100} onChange={this.onSliderChange.bind(this)} />
-            <div className="empty01"></div>
+            <div className="empty01 clearfix">
+              <div className="fn-left startNum">1</div>
+              <div className="fn-right endNum">100</div>
+            </div>
             <Toast visible={this.state.showToast} text={this.state.betRes} onChange={this.onToastHandle.bind(this)} />
           </div>
 

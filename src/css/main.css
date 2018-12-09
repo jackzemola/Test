@@ -6,6 +6,12 @@
 	visibility: none;
 	clear: both;
 }
+.fn-left{
+	float: left;
+}
+.fn-right{
+	float: right;
+}
 .header_mod{
 	background-color: #1a1b1d;
 	height: 102px;
@@ -218,4 +224,15 @@
 	padding-top: 5%;
 	color: #fac500;
 	float: left;
+}
+.startNum, .endNum{
+	color: #fac500;
+	font-size: 2.4rem;
+	margin-top: 40px;
+}
+.startNum {
+	margin-left: 94px;
+}
+.endNum{
+	margin-right: 64px;
 }

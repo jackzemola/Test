@@ -9,7 +9,6 @@
     <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <style>
       html {
-            background: #ffffff;
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
             font-size: 62.5%;
@@ -18,6 +17,9 @@
         html, body, #app {
           width: 100%;
           height: 100%;
+        }
+        #app {
+            overflow: auto;
         }
     </style>
   </head>
@@ -33,9 +35,9 @@
             var appScale     = winWidths >= defaultWidth ? 1 : (winWidths / defaultWidth);
             viewport.content = 'width=device-width,initial-scale=' + appScale + ', minimum-scale=' + appScale + ', maximum-scale=' + appScale;
           }
-          if (isiOS) {
+        //   if (isiOS) {
             setAutoWindow();
-          }
+        //   }
         </script>
     <div id="app"></div>
   </body>

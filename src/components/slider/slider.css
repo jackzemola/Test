@@ -1,0 +1,23 @@
+.wrapper {
+    position: relative;
+    margin-left: 88px;
+    background-color: #0e0e1b;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}
+.slider {
+    position: absolute; 
+    top: -30px;
+    margin-left: -30px;
+    left: 0;
+    width: 79px;
+    height: 79px;
+    display: inline-block;
+    background-image:url(../../img/slider.png);
+    cursor: pointer;
+}
+.fill {
+    height: 10px;
+    background: #f7b700;
+    border-radius: 4px;
+}

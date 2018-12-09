@@ -15,17 +15,25 @@
   "author": "jackzemola",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
     "babel-core": "^6.23.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "jest-cli": "^23.6.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.4.0",
     "react-hot-loader": "^3.1.3",
+    "redux-devtools": "^3.4.2",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.23.1",
@@ -35,11 +43,20 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
+    "classnames": "^2.2.6",
     "eosjs": "^8.0.1",
+    "i18n-react": "^0.6.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-addons-deep-compare": "0.0.1",
     "react-dom": "^16.6.0",
-    "react-router-dom": "^4.3.1"
-  }
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "browserslist": [
+    "ios >= 8",
+    "android >= 4.4",
+    "not ie <= 11"
+  ]
 }

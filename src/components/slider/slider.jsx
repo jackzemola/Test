@@ -1,5 +1,6 @@
 import React from 'react';
 import deepCompare from 'react-addons-deep-compare';
+import './slider.css';
 
 //import styles from './sc.css'
 
@@ -27,24 +28,13 @@ export default class Slider extends React.Component {
     //const value = 0//this.props.default || 50; drag: false,
     const step = parseInt(this.props.width/this.props.max)*2
     this.state = {left:0,value:0,drag: false,prevX:0,step:step};
-    this.onMouseMove = this.onMouseMove.bind(this);
-    this.onMouseDown = this.onMouseDown.bind(this);
-    //this.onMouseFillDown = this.onMouseFillDown.bind(this);
-    
-    this.onMouseUp = this.onMouseUp.bind(this);
     this.setValue = this.setValue.bind(this);
     this.getValue = this.getValue.bind(this);
   }
 
   componentDidMount() {
-    //window.addEventListener('mousemove', this.onMouseFillDown);
-    window.addEventListener('mousemove', this.onMouseMove);
-    window.addEventListener('mouseup', this.onMouseUp);
   }
  componentWillUnMount() {
-   // window.removeEventListener('mousemove', this.onMouseFillDown);
-    window.removeEventListener('mousemove', this.onMouseMove);
-    window.removeEventListener('mouseup', this.onMouseUp);
   }
   componentDidUpdate() {
     const value = calcValue(this);
@@ -58,30 +48,6 @@ export default class Slider extends React.Component {
     return deepCompare(this, nextProps, nextState);
   }
 
-  // onMouseFillDown(event) {
- //    var offsetLeft = event.target.offsetLeft   
- //    const width = calcWidth(event.clientX,offsetLeft, this.props.width);
- //    const value = calcValue(this);
- //    this.setState({width,value,drag: true,});
- //    //console.log("event.target",event.target)
- //    //console.log("event.currentTarget",event.currentTarget)
- //    console.log("FillDown:cx[%d]-offs[%f]-w[%d]-v[%d]",event.clientX,offsetLeft,width,value)
-   
- //  }
-
-  onMouseDown(event) {
-    
-   // console.log("Down",event.target.id)
-    if(event.target.id == 'sbnt') {
-      this.setState({drag: true});
-      var ox = event.clientX
-      this.setState({prevX: ox});
-      //console.log("Down",ox,event.clientX)
-      //isDrag = true
-      return
-    }
- 
-  }
   rangeOffset(offset){
       if(offset >this.state.step)offset = this.state.step
       if(offset <-this.state.step)offset = -this.state.step
@@ -92,16 +58,22 @@ export default class Slider extends React.Component {
     if (left <= 0) return 0;
     return left;
   }
-  // calcValue({state,props}){
+  onTouchStart(event) {
+    if(event.target.id == 'sbnt') {
+      this.setState({drag: true});
+      var ox = event.targetTouches[0].clientX
+      this.setState({prevX: ox});
+      
+      return
+    }
 
-  //   return parseInt(state.left / props.width * props.max);
-  // }
-  onMouseMove(event) {
+  }
+  onTouchMove(event) {
    
     if (this.state.drag)
     {
 
-      var ox = event.clientX
+      var ox = event.targetTouches[0].clientX
       var offset = ox - this.state.prevX
      // offset = this.rangeOffset(offset)
       const left = this.rangeLeft(this.state.left + offset,this.props.width)
@@ -109,18 +81,14 @@ export default class Slider extends React.Component {
       const value = calcValue(this)
 
       this.setState({left,value})
-      //console.log("Move[%s]:cx[%d]ox[%d]left[%d]-ofs[%d]",event.target.id,event.clientX,ox,left,offset)
+
       this.setState({prevX: ox})
     }
 
   }
 
-  onMouseUp() {
-
-    //isDrag = false
+  onTouchEnd() {
     if (this.state.drag) this.setState({drag: false});
-   // console.log("Up")
-
   }
 
   setValue(value) {
@@ -134,43 +102,23 @@ export default class Slider extends React.Component {
   }
 
   render() {
-  
-  /*
-    display: 'inline-block',
-  */
-    const wrapperStyle = {
-        position: 'relative', 
-        marginLeft: '150px',   
+    const wrapperStyle = { 
         width: this.props.width,
-        height: this.props.height,
-        backgroundColor: '#0e0e1b',
-        border: '1px solid darkgray',
+        height: this.props.height
     }
     const sliderStyle = {
-      position: 'absolute', 
-      marginTop: '-30px',
-      marginLeft: '-30px',
-      left: this.state.left,
-      width: '79px',
-      height: '79px',
-      display: 'inline-block',
-      backgroundImage:"url(" + require("../../img/slider.png") + ")",
-      cursor: 'pointer',
+      WebkitTransform: `translateX(${this.state.left}px)`
     }
     const fillStyle = {
-      display: 'inline-block',
-      width:  this.state.left,
-      height: '16px',
-      background: '#f7b700',
+      width:  this.state.left
     }
     return (
       <div>
-        <div id= "sbk" style={wrapperStyle} >
-          <div id= "sfill" style={fillStyle} ></div>
-            <div id="sbnt" style = {sliderStyle} onMouseDown={this.onMouseDown}></div>
+        <div id= "sbk" className="wrapper" style={wrapperStyle} >
+          <div id= "sfill" className="fill" style={fillStyle} ></div>
+            <div id="sbnt" className="slider" style = {sliderStyle} onTouchStart={this.onTouchStart.bind(this)}  onTouchMove={this.onTouchMove.bind(this)}  onTouchEnd={this.onTouchEnd.bind(this)}></div>
           </div>
       </div>
-     
     );
   }
 }

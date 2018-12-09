@@ -1,14 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { changeLang } from '@/store/actions/index'
+import { MDText } from 'i18n-react';
 import '../css/how.css';
-export default class How extends React.Component {
+
+let T;
+
+const mapStateToProps = (state) => ({
+	lang: state.lang
+})
+
+class How extends React.Component {
 	constructor(props) {
 		super(props)
-
+		T = new MDText(props.lang.data);
 	}
 	render() {
 		return (
 		<div className="how">
-			<div className="how_title">如何游戏</div>	
+			<T.div className="how_title" text={{key: "how to play"}}></T.div>	
 			<hr></hr>	
 			<div className="how_content">
 				<p>1.请确保您拥有EOS账户。如果还没有，请参考教程创建EOS账户。</p>
@@ -24,3 +34,5 @@ export default class How extends React.Component {
 		);
 	}
 }
+
+export default connect(mapStateToProps)(How)

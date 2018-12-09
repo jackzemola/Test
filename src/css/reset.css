@@ -1,5 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
-body{
+* {
+	margin:0;
+	padding:0;
+	border: none;
+	
+}
+body, html{
 	background: url("../img/bg.png");
 }

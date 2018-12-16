@@ -61,7 +61,11 @@ export default class Slider extends React.Component {
   onTouchStart(event) {
     if(event.target.id == 'sbnt') {
       this.setState({drag: true});
-      var ox = event.targetTouches[0].clientX
+      let ox = event.clientX || event.targetTouches[0].clientX;
+      if (event.clientX) {
+        document.addEventListener('mousemove', this.onTouchMove.bind(this))
+        document.addEventListener('mouseup', this.onTouchEnd.bind(this))
+      }
       this.setState({prevX: ox});
       
       return
@@ -73,7 +77,7 @@ export default class Slider extends React.Component {
     if (this.state.drag)
     {
 
-      var ox = event.targetTouches[0].clientX
+      var ox = event.clientX || event.targetTouches[0].clientX
       var offset = ox - this.state.prevX
      // offset = this.rangeOffset(offset)
       const left = this.rangeLeft(this.state.left + offset,this.props.width)
@@ -89,6 +93,8 @@ export default class Slider extends React.Component {
 
   onTouchEnd() {
     if (this.state.drag) this.setState({drag: false});
+    document.removeEventListener('mousemove', this.onTouchMove)
+    document.removeEventListener('mouseup',this.onTouchEnd)
   }
 
   setValue(value) {
@@ -116,7 +122,7 @@ export default class Slider extends React.Component {
       <div>
         <div id= "sbk" className="wrapper" style={wrapperStyle} >
           <div id= "sfill" className="fill" style={fillStyle} ></div>
-            <div id="sbnt" className="slider" style = {sliderStyle} onTouchStart={this.onTouchStart.bind(this)}  onTouchMove={this.onTouchMove.bind(this)}  onTouchEnd={this.onTouchEnd.bind(this)}></div>
+            <div id="sbnt" className="slider" style = {sliderStyle} onTouchStart={this.onTouchStart.bind(this)} onMouseDown={this.onTouchStart.bind(this)}  onTouchMove={this.onTouchMove.bind(this)} onTouchEnd={this.onTouchEnd.bind(this)} ></div>
           </div>
       </div>
     );

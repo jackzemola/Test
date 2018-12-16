@@ -210,7 +210,8 @@ export default class Home extends React.Component {
     wlist.push("player1")
     wlist.push("player2")
     wlist.push("player3")
-    console.log(wlist);
+    wlist.push("player3")
+    wlist.push("player3")
 
     let list = this.state.userList;
     list.push(['10.11 20:10:10', 'player1', '0.2']);

@@ -11,11 +11,18 @@ export default class Head extends React.Component {
 
 	openDrawerToggle = (e) => {
 		if (e.target && e.target.matches('.header_menu_btn')) {
-			this.setState((prevState) => {
-				return {showDrawer: !prevState.showDrawer};
+			this.setState({showDrawer: true}, () => {
+				if (this.state.showDrawer) {
+					document.addEventListener('click', this.closeDrawerToggle)
+				}
 			})
 		}
-  	}
+	  }
+	  
+	closeDrawerToggle = () => {
+		this.setState({showDrawer: false})
+		document.removeEventListener('click', this.closeDrawerToggle);
+	}
 
 	render() {
 		return (

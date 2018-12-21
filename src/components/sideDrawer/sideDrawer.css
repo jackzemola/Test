@@ -3,9 +3,10 @@
   box-shadow: 10px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 102px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 20px 0 66px;
-  width: 100%;
+  width: 750px;
   z-index: 200;
   display: none;
 }
@@ -32,6 +33,10 @@
 .side-drawer a, .side-drawer span {
   color: #fac500;
   text-decoration: none;
+}
+.side-drawer a {
+  width: 100%;
+  display: inline-block;
 }
 
 .side-drawer span {

@@ -13,9 +13,12 @@
 	float: right;
 }
 .header_mod{
+	position: fixed;
+	top:0;
+	left:0;
 	background-color: #1a1b1d;
 	height: 102px;
-	width:750px;
+	width:100%;
 	overflow: hidden;
 }
 
